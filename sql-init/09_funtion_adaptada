@@ -1,0 +1,9 @@
+CREATE OR REPLACE FUNCTION actualizar_estado_pizarra()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE pizarras
+    SET id_estado = 2  -- 2 = 'En Reparación'
+    WHERE id_pizarras = NEW.id_pizarra;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
