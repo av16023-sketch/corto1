@@ -1,0 +1,4 @@
+INSERT INTO estados_pizarra (nombre) VALUES
+('Operativa'),
+('En Reparación'),
+('Fuera de Servicio');
