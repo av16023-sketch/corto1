@@ -1,0 +1,4 @@
+INSERT INTO tecnicos (nombre, especialidad) VALUES
+('Carlos Pérez', 'Electrónica'),
+('Ana López', 'Hardware'),
+('Luis Martínez', 'Sistemas');
