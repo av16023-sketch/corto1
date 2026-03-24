@@ -1,0 +1,4 @@
+INSERT INTO reportes_fallos (fecha, descripcion, id_pizarra, id_tecnico) VALUES
+('2026-03-20', 'Pantalla no enciende', 1, 1),
+('2026-03-21', 'Falla táctil', 2, 2),
+('2026-03-22', 'Problema de conexión', 3, 3);
