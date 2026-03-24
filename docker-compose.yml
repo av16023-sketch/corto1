@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgresdb17
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: corto_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql-init:/docker-entrypoint-initdb.d
+    ports:
+      - "5435:5432"
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin1
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5051:80"
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
