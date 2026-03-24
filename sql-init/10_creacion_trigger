@@ -1,0 +1,4 @@
+CREATE TRIGGER trg_actualizar_estado
+AFTER INSERT ON reportes_fallos
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_estado_pizarra();
